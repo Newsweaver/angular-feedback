@@ -533,6 +533,7 @@ angular.module('angular-send-feedback').directive('angularFeedback', [ function(
                                         }, function errorCallback() {
                                             $('#feedback-module').append(settings.tpl.submitError);
                                         });
+
                                     }
                                     else {
                                         $('#feedback-overview-error').show();
