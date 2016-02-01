@@ -1,6 +1,6 @@
 /**
  * Angular feedback directive similar to Google Feedback
- * @version v1.0.2 - 2016-01-29 * @link https://github.com/jacobscarter/angular-feedback
+ * @version v1.0.2 - 2016-02-01 * @link https://github.com/jacobscarter/angular-feedback
  * @author Jacob Carter <jacob@ieksolutions.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -26,7 +26,7 @@ angular.module('angular-send-feedback').directive('angularFeedback', [ function(
         //templateUrl: function(element, attributes) {
           //return attributes.template || "angularsendfeedback.html";
         //},
-        link: function($scope, $element, $attrs) {
+        link: function($scope, $element, $attrs, $http) {
 
             (function($){
 
@@ -538,18 +538,17 @@ angular.module('angular-send-feedback').directive('angularFeedback', [ function(
                                         post.img = img;
                                         post.note = $('#feedback-note').val();
                                         var data = {feedback: JSON.stringify(post)};
-                                        $.ajax({
+
+                                        $http({
+                                            method: 'POST',
                                             url: typeof settings.ajaxURL === 'function' ? settings.ajaxURL() : settings.ajaxURL,
-                                            dataType: 'json',
-                                            type: 'POST',
-                                            data: data,
-                                            success: function() {
-                                                $('#feedback-module').append(settings.tpl.submitSuccess);
-                                            },
-                                            error: function(){
-                                                $('#feedback-module').append(settings.tpl.submitError);
-                                            }
+                                            data: data
+                                        }).then(function successCallback() {
+                                            $('#feedback-module').append(settings.tpl.submitSuccess);
+                                        }, function errorCallback() {
+                                            $('#feedback-module').append(settings.tpl.submitError);
                                         });
+
                                     }
                                     else {
                                         $('#feedback-overview-error').show();
