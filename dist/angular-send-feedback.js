@@ -542,7 +542,8 @@ angular.module('angular-send-feedback').directive('angularFeedback', [ '$http', 
                                         $http({
                                             method: 'POST',
                                             url: typeof settings.ajaxURL === 'function' ? settings.ajaxURL() : settings.ajaxURL,
-                                            data: data
+                                            data: data,
+                                            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                                         }).then(function successCallback() {
                                             $('#feedback-module').append(settings.tpl.submitSuccess);
                                         }, function errorCallback() {
