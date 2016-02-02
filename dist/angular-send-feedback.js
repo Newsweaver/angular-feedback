@@ -13,7 +13,7 @@ angular.module("angularsendfeedback.html", []).run(["$templateCache", function($
 
 angular.module('angular-send-feedback', ['templates-angularsendfeedback']);
 
-angular.module('angular-send-feedback').directive('angularFeedback', [ '$http', function() {
+angular.module('angular-send-feedback').directive('angularFeedback', [ '$http', function($http) {
         
 
     return {
@@ -26,7 +26,7 @@ angular.module('angular-send-feedback').directive('angularFeedback', [ '$http', 
         //templateUrl: function(element, attributes) {
           //return attributes.template || "angularsendfeedback.html";
         //},
-        link: function($scope, $element, $attrs, $http) {
+        link: function($scope, $element, $attrs) {
 
             (function($){
 
