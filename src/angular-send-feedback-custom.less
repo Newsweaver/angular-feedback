@@ -1,0 +1,77 @@
+// Main Feedback Button
+.feedback-btn {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: none;
+  background-color: @nw-red;
+  border: none;
+  color: white;
+
+  &:hover {
+    background-image: none;
+    background-color: darken(@nw-red, 5%);
+    border: none;
+    color: white;
+  }
+}
+
+// All Dialog Boxes
+#feedback-highlighter,
+#feedback-overview,
+#feedback-submit-success,
+#feedback-submit-error {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: none;
+
+  h2 {
+    color: @nw-red;
+    margin-top: 0;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-weight: normal;
+    background-image: none;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+// Submit Button
+.feedback-submit-btn {
+  border: none;
+  color: white;
+  background-color: @green;
+
+  &:hover {
+    background-color: darken(@green, 5%);
+  }
+}
+
+// Blue Buttons
+.feedback-btn-blue {
+  border: none;
+  color: white;
+
+  &:hover {
+    background-color: @dark-blue;
+  }
+}
+
+
+// First Dialog Box
+#feedback-highlighter {
+  height: 280px;
+  width: 600px;
+  padding: 35px;
+
+  button {
+    margin-right: 0;
+  }
+
+  .feedback-active,
+  .feedback-active:hover {
+    background-color: @nw-red;
+    color: white;
+  }
+}
