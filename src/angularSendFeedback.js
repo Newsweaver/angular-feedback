@@ -1,18 +1,3 @@
-/**
- * Angular feedback directive similar to Google Feedback
- * @version v1.0.2 - 2016-02-02 * @link https://github.com/jacobscarter/angular-feedback
- * @author Jacob Carter <jacob@ieksolutions.com>
- * @license MIT License, http://www.opensource.org/licenses/MIT
- */
-angular.module('templates-angularsendfeedback', ['angularsendfeedback.html']);
-
-angular.module("angularsendfeedback.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("angularsendfeedback.html",
-    "");
-}]);
-
-angular.module('angular-send-feedback', ['templates-angularsendfeedback']);
-
 angular.module('angular-send-feedback').directive('angularFeedback', [ '$http', function($http) {
 
 
