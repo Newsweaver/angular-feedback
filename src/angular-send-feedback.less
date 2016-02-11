@@ -328,3 +328,85 @@
   margin-top: 16px;
   display: none;
 }
+
+
+
+// **********  NEWSWEAVER CUSTOM LESS  *****************
+
+// Main Feedback Button
+.feedback-btn {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: none;
+  background-color: #CD052A;
+  border: none;
+  color: white;
+
+  &:hover {
+    background-image: none;
+    background-color: darken(#CD052A, 5%);
+    border: none;
+    color: white;
+  }
+}
+
+// All Dialog Boxes
+#feedback-highlighter,
+#feedback-overview,
+#feedback-submit-success,
+#feedback-submit-error {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: none;
+
+  h2 {
+    color: #CD052A;
+    margin-top: 0;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-weight: normal;
+    background-image: none;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+// Submit Button
+.feedback-submit-btn {
+  border: none;
+  color: white;
+  background-color: #5cb85c;
+
+  &:hover {
+    background-color: darken(#5cb85c, 5%);
+  }
+}
+
+// Blue Buttons
+.feedback-btn-blue {
+  border: none;
+  color: white;
+
+  &:hover {
+    background-color: #2e6da4;
+  }
+}
+
+
+// First Dialog Box
+#feedback-highlighter {
+  height: 280px;
+  width: 600px;
+  padding: 35px;
+
+  button {
+    margin-right: 0;
+  }
+
+  .feedback-active,
+  .feedback-active:hover {
+    background-color: #CD052A;
+    color: white;
+  }
+}
