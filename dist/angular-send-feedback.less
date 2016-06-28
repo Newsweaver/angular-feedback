@@ -1,9 +1,10 @@
 .feedback-btn {
-  font-size: 14px;
   position: fixed;
-  bottom: -3px;
-  right: 60px;
+  right: 0;
+  top: 50%;
   width: auto;
+  transform: rotate(-90deg);
+  margin: -50px;
 }
 #feedback-module p {  font-size: 13px }
 #feedback-note-tmp {
@@ -138,7 +139,7 @@
   -webkit-box-shadow: 0 4px 16px rgba(0,0,0,.2);
   -moz-box-shadow: 0 4px 16px rgba(0,0,0,.2);
   box-shadow: 0 4px 16px rgba(0,0,0,.2);
-  z-index: 40000;
+  z-index: 999;
 }
 .feedback-btn-gray {
   text-align: center;
@@ -336,6 +337,7 @@
 // Main Feedback Button
 .feedback-btn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
   background-image: none;
   background-color: #CD052A;
   border: none;
