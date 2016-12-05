@@ -472,7 +472,7 @@ angular.module('angular-send-feedback').directive('angularFeedback', ['$http', f
                                 if (!settings.screenshotStroke) {
                                     redraw(ctx, false);
                                 }
-                                html2canvas($('body')).then(function (canvas) {
+                                settings.html2canvas($('body')).then(function (canvas) {
                                     //  html2canvas($('body'), {
                                     //     onrendered: function(canvas) {
                                     if (!settings.screenshotStroke) {
