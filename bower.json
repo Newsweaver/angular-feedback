@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "angular": "*",
-    "jquery": "*",
-    "html2canvas": "*"
+    "jquery": "*"
   },
   "ignore": [
     "node_modules",
